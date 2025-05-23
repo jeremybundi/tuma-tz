@@ -43,13 +43,13 @@ const Section = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50">
+    <section className="relative overflow-hidden py-24  md:py-36 bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 lg:items-stretch"> {/* lg:items-stretch for equal height columns */}
           {/* Left Column: Text Content */}
           <div ref={leftColumnRef} className="text-center lg:text-left flex flex-col justify-center">
             <div> {/* Inner div to control content stretching */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight leading-[1.1]">
+              <h1 className="text-[28px] md:text-[60px] font-bold text-slate-800 tracking-tight leading-[1.1]">
                 Tanzania&apos;s Modern {/* ' for apostrophe */}
                 <br />
                 Payment Processor

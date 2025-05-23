@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   return (
     <div>
         <div className='bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50'>
-        <NavBar />
+        {/*<NavBar />*/}
         <Section/>
         </div>
         <div className='bg-teal-50 py-14'>

@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-//import { useRouter } from 'next/navigation'; 
+import { usePathname } from 'next/navigation'; // For Next.js App Router
+// If using Pages Router, you'd use: import { useRouter } from 'next/router';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logo from '../../../../public/images/logo.png';
+import logo from '../../../../public/images/logo.png'; // Ensure this path is correct
 
 const navLinksData = [
   { href: '/', label: 'Home' },
@@ -16,33 +17,40 @@ const navLinksData = [
   { href: '/regulation-licensing', label: 'Regulation & Licensing' },
 ];
 
-const A = () => {
+const NavbarComponent = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  //const router = useRouter();
-  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  const pathname = usePathname(); // Get current path using Next.js hook
+  const prevPathnameRef = useRef(pathname); // Store previous pathname to detect changes
 
-  // Handle scroll effect - improved for mobile
+  // Handle scroll effect for sticky navbar
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    // Use passive event listener for better mobile performance
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close mobile menu on actual route change (e.g., browser back/forward)
   useEffect(() => {
-    if (isMobileMenuOpen) {
+    // Only close if the menu is open AND the path has actually changed
+    if (isMobileMenuOpen && prevPathnameRef.current !== pathname) {
       setIsMobileMenuOpen(false);
     }
-  }, [currentPath, isMobileMenuOpen]);
+    // Update the ref to the current pathname for the next comparison
+    prevPathnameRef.current = pathname;
+  }, [pathname, isMobileMenuOpen]); // Dependencies: run when pathname or isMobileMenuOpen changes
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    // Cleanup function to reset overflow when component unmounts
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -52,26 +60,33 @@ const A = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Handles link clicks within the mobile menu or desktop nav
   const handleLinkClick = () => {
     if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
+      setIsMobileMenuOpen(false); // Close mobile menu if it's open
     }
+    // For desktop, no explicit action needed here unless you want to scroll to top, etc.
   };
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return currentPath === '/';
+      return pathname === '/';
     }
-    return currentPath.startsWith(href);
+    // For other links, check if the current path starts with the link's href
+    // This handles nested routes like /about/team correctly marking /about as active.
+    return pathname.startsWith(href);
   };
 
   return (
     <>
-     <nav className={`sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3 md:px-10 md:py-4 shadow-md md:shadow-none transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/80 backdrop-blur-sm bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50 shadow-md' 
-        : 'bg-transparent'
-    }`}>
+      <nav
+        className={`sticky top-0 z-50 flex w-full items-center justify-between px-4 py-3 md:px-10 md:py-4 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-white shadow-md' // Simpler scrolled background
+            // Consider your gradient if you prefer: 'bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50 shadow-md'
+            : 'bg-transparent md:shadow-none' // Ensure md:shadow-none for transparent state on desktop
+        }`}
+      >
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link href="/" aria-label="Tuma Home" onClick={handleLinkClick}>
@@ -85,11 +100,12 @@ const A = () => {
             <Link
               key={link.href}
               href={link.href}
+              onClick={handleLinkClick} // Good practice even for desktop for consistency
               className={`
                 whitespace-nowrap text-[16px] no-underline
                 ${isActive(link.href)
                   ? 'font-semibold text-slate-800'
-                  : 'font-medium text-[#A6A6A6] hover:text-slate-700 transition-colors'
+                  : 'font-medium text-gray-500 hover:text-slate-700 transition-colors' // Adjusted non-active color
                 }
               `}
             >
@@ -101,7 +117,7 @@ const A = () => {
         {/* Desktop Download App Button */}
         <div className="hidden md:block flex-shrink-0">
           <Link
-            href="/download-app"
+            href="/download-app" // Make sure this route exists
             className="
               inline-block whitespace-nowrap rounded-full 
               bg-[#65C895] px-5 py-2 lg:px-6 lg:py-2.5
@@ -119,6 +135,7 @@ const A = () => {
           <button
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
             className="p-2 text-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500 rounded-md"
           >
             {isMobileMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
@@ -126,18 +143,18 @@ const A = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Click outside to close */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 z-[45] bg-black bg-opacity-50 md:hidden"
-          onClick={toggleMobileMenu}
+          onClick={toggleMobileMenu} // Close menu when overlay is clicked
           aria-hidden="true"
         />
       )}
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full transform bg-white shadow-xl transition-transform duration-300 ease-in-out z-[60] md:hidden
+        className={`fixed top-0 right-0 h-full w-full  transform bg-white shadow-xl transition-transform duration-700 ease-in-out z-[60] md:hidden
                     ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
         role="dialog"
         aria-modal="true"
@@ -159,7 +176,7 @@ const A = () => {
           </div>
 
           {/* Mobile Navigation Links */}
-          <nav className="flex-grow space-y-1 p-4">
+          <nav className="flex-grow space-y-1 p-4 overflow-y-auto"> {/* Added overflow-y-auto */}
             {navLinksData.map((link) => (
               <Link
                 key={link.href}
@@ -169,7 +186,7 @@ const A = () => {
                     ? 'bg-teal-50 text-teal-700'
                     : 'text-slate-700 hover:bg-gray-100 hover:text-slate-900'
                   } transition-colors`}
-                onClick={handleLinkClick}
+                onClick={handleLinkClick} // This will close the menu
               >
                 {link.label}
               </Link>
@@ -179,7 +196,7 @@ const A = () => {
           {/* Mobile Download App Button */}
           <div className="mt-auto p-4 border-t border-gray-200">
             <Link
-              href="/download-app"
+              href="/download-app" // Make sure this route exists
               className="
                 block w-full whitespace-nowrap rounded-full 
                 bg-[#65C895] px-6 py-3 text-center
@@ -187,7 +204,7 @@ const A = () => {
                 no-underline
                 hover:bg-[#58b886] transition-colors
               "
-              onClick={handleLinkClick}
+              onClick={handleLinkClick} // This will close the menu
             >
               Download App
             </Link>
@@ -198,4 +215,4 @@ const A = () => {
   );
 };
 
-export default A;
+export default NavbarComponent; // Renamed component to NavbarComponent (PascalCase)
