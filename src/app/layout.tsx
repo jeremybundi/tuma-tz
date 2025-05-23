@@ -1,10 +1,14 @@
+// app/layout.tsx (or pages/_app.tsx if using Pages Router)
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google"; // Import DM_Sans
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Setup DM_Sans
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  weight: ['400', '500', '700'], // Add weights you intend to use
+  variable: "--font-dm-sans", // Define a CSS variable for DM Sans
 });
 
 const geistMono = Geist_Mono({
@@ -23,10 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${dmSans.variable} ${geistMono.variable} antialiased`}> {/* Use dmSans.variable */}
         {children}
       </body>
     </html>
