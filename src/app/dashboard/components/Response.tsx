@@ -3,9 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import { BsCheckCircleFill } from 'react-icons/bs'; 
 
-import q1Icon from '../../../../public/svg/Q3.svg'; // Replace with actual path
-import q2Icon from '../../../../public/svg/Q2.svg'; // Replace with actual path
-import q3Icon from '../../../../public/svg/Q1.svg'; 
+import q1Icon from '../../../../public/svg/q3.svg'; // Replace with actual path
+import q2Icon from '../../../../public/svg/q2.svg'; // Replace with actual path
+import q3Icon from '../../../../public/svg/q1.svg'; 
 
 interface ResponseTarget {
   icon: any; // StaticImageData or string for src
