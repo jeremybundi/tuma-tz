@@ -50,7 +50,7 @@ const Section = () => {
           <div ref={leftColumnRef} className="text-center lg:text-left flex flex-col justify-center">
             <div> {/* Inner div to control content stretching */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 tracking-tight leading-[1.1]">
-                Tanzania's Modern {/* ' for apostrophe */}
+                Tanzania&apos;s Modern {/* ' for apostrophe */}
                 <br />
                 Payment Processor
               </h1>
@@ -67,7 +67,7 @@ const Section = () => {
               <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Move money with confidence. Tuma is a regulated,{' '}
                 <span style={{ color: highlightGreen }}>cloud-native</span> payment
-                processing platform built for Tanzania. Whether you're a
+                processing platform built for Tanzania. Whether you&apos;re a
                 business or an individual, Tuma enables{' '}
                 <span style={{ color: highlightGreen }}>fast, secure, and seamless payments</span>{' '}
                 directly from Tanzanian Visa or Mastercard holders to mobile

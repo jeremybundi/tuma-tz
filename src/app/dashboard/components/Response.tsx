@@ -1,18 +1,18 @@
 // Response.tsx
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { BsCheckCircleFill } from 'react-icons/bs'; 
 
-import q1Icon from '../../../../public/svg/q3.svg'; // Replace with actual path
-import q2Icon from '../../../../public/svg/q2.svg'; // Replace with actual path
+import q1Icon from '../../../../public/svg/q3.svg'; 
+import q2Icon from '../../../../public/svg/q2.svg'; 
 import q3Icon from '../../../../public/svg/q1.svg'; 
 
 interface ResponseTarget {
-  icon: any; // StaticImageData or string for src
+  icon: StaticImageData;
   alt: string;
   description: string;
   time: string;
-  iconBgClass?: string; // Optional: if SVGs don't have their own colored circle
+  iconBgClass?: string; 
 }
 
 const responseTargets: ResponseTarget[] = [
@@ -21,7 +21,7 @@ const responseTargets: ResponseTarget[] = [
     alt: 'Self-service issues icon',
     description: 'Self-service issues',
     time: 'Instant',
-    iconBgClass: 'bg-[#0F8CE9] text-blue-500', // Example if icon needs background
+    iconBgClass: 'bg-[#0F8CE9] text-blue-500',
   },
   {
     icon: q2Icon,
@@ -54,7 +54,7 @@ const Response: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">
             Response Time Targets
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3  md:gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0">
             {responseTargets.map((target, index) => (
               <div
                 key={target.description}

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'; 
+//import { useRouter } from 'next/navigation'; 
 import { HiMenu, HiX } from 'react-icons/hi';
 import logo from '../../../../public/images/logo.png';
 
@@ -19,7 +19,7 @@ const navLinksData = [
 const A = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
+  //const router = useRouter();
   const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
 
   // Handle scroll effect - improved for mobile
