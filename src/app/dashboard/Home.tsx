@@ -7,6 +7,9 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Merchant from './components/Merchant';
 import Support from './components/Support';
 import Response from './components/Response';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
+
 
 
 
@@ -30,6 +33,12 @@ const Home: React.FC = () => {
         </div>
         <Support/>
         <Response/>
+        <div className='bg-[#101727]'>
+        <ContactUs/>
+        <Footer/>
+
+        </div>
+       
 
 
 
