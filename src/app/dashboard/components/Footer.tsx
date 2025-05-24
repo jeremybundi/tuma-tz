@@ -1,34 +1,34 @@
 "use client";
 
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // Assuming these are string paths to images in the 'public' folder
-const tumaLogoPath: string = '/svg/logo.png'; // Your path
-const appleLogoPath: string = '/svg/Apple.svg'; // Your path
-const playstoreLogoPath: string = '/svg/Playstore.svg'; // Your path
-const facebookIconPath: string = '/svg/facebook.svg'; // Your path
-const instagramIconPath: string = '/svg/Frame.png'; // Your path
-const linkedinIconPath: string = '/svg/linkedin.svg'; // Your path
-const twitterIconPath: string = '/svg/twitter.svg'; // Your path
+const tumaLogoPath: string = '/svg/logo.png'; 
+const appleLogoPath: string = '/svg/Apple.svg'; 
+const playstoreLogoPath: string = '/svg/Playstore.svg'; 
+const facebookIconPath: string = '/svg/facebook.svg'; 
+const instagramIconPath: string = '/svg/Frame.png'; 
+const linkedinIconPath: string = '/svg/linkedin.svg';
+const twitterIconPath: string = '/svg/twitter.svg'; 
 
 // Define actual store links
-const APPLE_STORE_LINK = "YOUR_APP_STORE_LINK_HERE"; // Replace
-const GOOGLE_PLAY_LINK = "YOUR_GOOGLE_PLAY_LINK_HERE"; // Replace
+const APPLE_STORE_LINK = "YOUR_APP_STORE_LINK_HERE"; 
+const GOOGLE_PLAY_LINK = "YOUR_GOOGLE_PLAY_LINK_HERE"; 
 
 const footerNavLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/how-it-works', label: 'How it Works' },
-  { href: '/why-choose-tuma', label: 'Why Choose Tuma' },
-  { href: '/customer-support', label: 'Customer Support' },
-  { href: '/regulation-licensing', label: 'Regulation & Licensing' },
+    { href: '#hero', label: 'Home', id: 'hero' }, 
+    { href: '#about', label: 'About', id: 'about' },
+    { href: '#how-it-works', label: 'How it Works', id: 'how-it-works' },
+    { href: '#why-choose-tuma', label: 'Why Choose Tuma', id: 'why-choose-tuma' },
+    { href: '#customer-support', label: 'Customer Support', id: 'customer-support' },
+    { href: '#regulation-licensing', label: 'Regulation & Licensing', id: 'regulation-licensing' },
 ];
 
 interface SocialLink {
   href: string;
-  iconSrc: string; // Using iconSrc for consistency
+  iconSrc: string; 
   alt: string;
 }
 
@@ -50,7 +50,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" text-white pb-8 md:pb-12"> {/* Changed bg to match previous good version */}
+    <footer className=" text-white  pb-8 md:pb-12"> {/* Changed bg to match previous good version */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 lg:gap-12">
           {/* Column 1: Logo, Description, App Stores */}

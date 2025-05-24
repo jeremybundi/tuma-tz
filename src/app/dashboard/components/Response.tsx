@@ -1,18 +1,18 @@
-// Response.tsx
+// Response.tsx (updated)
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { BsCheckCircleFill } from 'react-icons/bs'; 
 
-import q1Icon from '../../../../public/svg/q3.svg'; 
-import q2Icon from '../../../../public/svg/q2.svg'; 
-import q3Icon from '../../../../public/svg/q1.svg'; 
+// Icons can stay here if Response.tsx is the only place they are used for response targets
+import q1Icon from '../../../../public/svg/q3.svg';
+import q2Icon from '../../../../public/svg/q2.svg';
+import q3Icon from '../../../../public/svg/q1.svg';
 
 interface ResponseTarget {
   icon: StaticImageData;
   alt: string;
   description: string;
   time: string;
-  iconBgClass?: string; 
+  iconBgClass?: string;
 }
 
 const responseTargets: ResponseTarget[] = [
@@ -21,7 +21,7 @@ const responseTargets: ResponseTarget[] = [
     alt: 'Self-service issues icon',
     description: 'Self-service issues',
     time: 'Instant',
-    iconBgClass: 'bg-[#0F8CE9] text-blue-500',
+    iconBgClass: 'bg-[#0F8CE9] text-blue-500', // Note: text-blue-500 might not do anything if SVG has its own colors
   },
   {
     icon: q2Icon,
@@ -39,19 +39,16 @@ const responseTargets: ResponseTarget[] = [
   },
 ];
 
-const regulatoryPoints: string[] = [
-  'PSP License issued under the National Payment Systems Act',
-  'Subject to quarterly audits and compliance reporting.',
-  'Secure systems and customer data handling in line with BoT expectations',
-];
-
-const Response: React.FC = () => {
+const ResponseTimeTargets: React.FC = () => { // Renamed component for clarity
   return (
-    <div className="bg-white py-12 md:py-12">
-      <div className="max-w-2xl mx-auto px-4">
+    <section
+      id="customer-support" // Assuming this section might correspond to "Customer Support"
+      className="bg-white py-12 md:py-16" // Keep padding for this section
+    >
+      <div className="max-w-5xl mx-auto px-4">
         {/* Response Time Targets Section */}
-        <div className="mb-16 md:mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-8">
+        <div className="text-center"> {/* Removed mb-16 from here, section has its own padding */}
+          <h2 className="text-[30px] md:text-[40px] font-bold text-gray-800 mb-6 md:mb-8">
             Response Time Targets
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0">
@@ -67,8 +64,8 @@ const Response: React.FC = () => {
                   <Image
                     src={target.icon}
                     alt={target.alt}
-                    width={28} 
-                    height={28} 
+                    width={28}
+                    height={28}
                   />
                 </div>
                 <p className="text-sm text-gray-500 mb-1">
@@ -79,30 +76,9 @@ const Response: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* Regulatory & Licensing Information Section */}
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 text-center">
-            Regulatory & Licensing Information
-          </h2>
-          <p className="text-gray-600 mb-8 md:mb-10 text-center text-base md:text-lg leading-relaxed">
-            Tuma Ventures Limited (Tanzania) is a registered and regulated Payment
-            Service Provider licensed by the Bank of Tanzania.
-          </p>
-          <ul className="space-y-4">
-            {regulatoryPoints.map((point, index) => (
-              <li key={index} className="flex items-start md:items-center">
-                <BsCheckCircleFill className="text-green-500 w-5 h-5 md:w-6 md:h-6 mr-3 mt-1 md:mt-0 flex-shrink-0" />
-                <span className="text-gray-700 text-base md:text-lg">
-                  {point}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Response;
+export default ResponseTimeTargets; // Export renamed component

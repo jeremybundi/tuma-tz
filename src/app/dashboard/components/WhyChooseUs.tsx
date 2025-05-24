@@ -37,8 +37,11 @@ const WhyChooseUs = () => {
 
   return (
     // The background gradient here is from white to a very light, slightly desaturated cyan/mint.
+    <section id='why-choose-tuma'>
+
+   
     <div className="py-12 md:py-20 bg-transparent">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-0">
       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-20 items-center">
           {/* Left Column: Features */}
@@ -97,6 +100,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

@@ -5,8 +5,8 @@ const Mission = () => {
   const missionText = "At Tuma, our mission is to build the digital infrastructure that powers Tanzania's cashless future. We're creating a reliable, secure, and locally rooted payments ecosystem that connects people, businesses, and banks through fast, transparent, and mobile-first technology. By simplifying how money moves, we're helping drive financial inclusion, support economic growth, and empower every Tanzanian to participate fully in the digital economy.";
 
   return (
-    <div className="container mx-auto px-4 sm:px-6">
-      <div className="rounded-2xl overflow-hidden bg-[#F9F9F9] md:flex max-w-6xl mx-auto">
+    <div className="container mx-auto md:pt-9 px-4 sm:px-6">
+      <div className="rounded-2xl overflow-hidden bg-[#F9F9F9]  md:flex max-w-7xl mx-auto">
         {/* Left Image Column (Mobile: Full width, Desktop: 40%) */}
         <div className="w-full hidden md:block md:w-2/5 relative">
           <div className="relative w-full aspect-[4/5] md:aspect-[2/3] md:h-[530px]">

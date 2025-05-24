@@ -93,10 +93,9 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    // You might want a wrapper div with a different page background, e.g., bg-slate-950 or bg-gray-100
     // This component starts with the dark contact block
-    <div className="bg-transparent py-12 md:py-20 px-4 sm:px-6 lg:px-8"> {/* Example outer page BG */}
-      <div className="max-w-6xl mx-auto   p-6 sm:p-8 md:p-12">
+    <div className="bg-transparent py-12 md:py-20 px-4 md:px-0 "> {/* Example outer page BG */}
+      <div className="container mx-auto  border-b border-gray-500 p-6 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20">
           {/* Left Column: Contact Info */}
           <div className="text-white">
@@ -183,7 +182,7 @@ const ContactUs: React.FC = () => {
               {submitStatus && (
                  <div className="mt-4 text-center text-sm">
                     {submitStatus === 'success' && (
-                        <p className="text-green-400">Message sent successfully! We'll get back to you soon.</p>
+                        <p className="text-green-400">Message sent successfully! We&apos;ll get back to you soon.</p>
                     )}
                     {submitStatus === 'error' && (
                         <p className="text-red-400">Failed to send message. Please try again later or contact us directly.</p>

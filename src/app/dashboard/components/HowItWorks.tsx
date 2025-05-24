@@ -44,11 +44,12 @@ const HowItWorks = () => {
   const totalStars = 5;
 
   return (
-    <div className="py-12 md:py-20 container mx-auto max-w-7xl bg-transparent">
-      <div className="container mx-auto px-4">
+    <section id='how-it-works'>
+    <div className="py-3 md:py-40 container mx-auto  bg-transparent">
+      <div className="container mx-auto  px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
           {/* Left Column: Text and Rating */}
-          <div className="space-y-6 md:space-y-0">
+          <div className="space-y-3 md:space-y-0">
             <h2 className="text-[30px] md:text-[40px] font-[600] md:mb-2 text-[#191A15]">
               How It Works
             </h2>
@@ -104,6 +105,7 @@ const HowItWorks = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

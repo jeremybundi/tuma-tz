@@ -49,8 +49,9 @@ const supportItems: SupportItem[] = [
 
 const Support: React.FC = () => {
   return (
-    <div className="bg-transparent py-3 md:py-7  overflow-hidden">
-      <div className="mx-auto max-w-3xl px-4 text-center">
+    <section id='customer-support'>
+    <div className="bg-transparent py-7  overflow-hidden">
+      <div className="mx-auto max-w-6xl  md:py-11 px-4 text-center">
         <span className="inline-block bg-emerald-100 text-emerald-700 text-[13px] md:text-[16px] font-semibold px-4 py-2 rounded-full mb-2">
           Always here when you need us.
         </span>
@@ -73,7 +74,7 @@ const Support: React.FC = () => {
                   className="w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12" 
                 />
               </div>
-              <h3 className="font-semibold text-gray-700 text-[13px] md:text-[16px] mb-1">
+              <h3 className="font-semibold text-gray-700 text-[14px] md:text-[16px] mb-1">
                 {item.title}
               </h3>
               <a
@@ -101,6 +102,7 @@ const Support: React.FC = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import {  HiCheck, HiTrendingUp } from 'react-icons/hi';
 import { FaRegCheckCircle } from "react-icons/fa"; // Used this in your code
 import { useRef, useEffect, useState } from 'react';
-import  Payment from './Payment'
 
 // Corrected image paths assuming they are in public/images/ and public/svg/
 import lineImage from '../../../../public/images/line.png';
@@ -43,13 +42,13 @@ const Section = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden py-24  md:py-36 bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hero" className="relative overflow-hidden py-24  md:py-36 bg-gradient-to-br from-teal-50 via-[#E0F7FA]/30 to-cyan-50">
+      <div className="container mx-auto px-4 md:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 lg:items-stretch"> {/* lg:items-stretch for equal height columns */}
           {/* Left Column: Text Content */}
           <div ref={leftColumnRef} className="text-center lg:text-left flex flex-col justify-center">
             <div> {/* Inner div to control content stretching */}
-              <h1 className="text-[28px] md:text-[60px] font-bold text-slate-800 tracking-tight leading-[1.1]">
+              <h1 className="text-[28px] md:text-[54px] font-bold text-slate-800 tracking-tight leading-[1.1]">
                 Tanzania&apos;s Modern {/* ' for apostrophe */}
                 <br />
                 Payment Processor
@@ -64,7 +63,7 @@ const Section = () => {
                   className='w-full max-w-[300px] md:max-w-[initial] md:w-2/3' // Constrain width on mobile, allow md:w-2/3
                 />
               </div>
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
+              <p className="text-[16px] md:text-[18px] text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Move money with confidence. Tuma is a regulated,{' '}
                 <span style={{ color: highlightGreen }}>cloud-native</span> payment
                 processing platform built for Tanzania. Whether you&apos;re a
@@ -74,26 +73,26 @@ const Section = () => {
                 wallets and bank accounts across the country.
               </p>
 
-              <div className="mt-8 lg:mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+              <div className="mt-6 lg:mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <Link
                   href="/download-app"
-                  className="inline-block whitespace-nowrap rounded-lg bg-[#65C895] px-8 py-3.5 text-base font-semibold text-white shadow-md hover:bg-[#58b886] transition-colors"
+                  className="inline-block whitespace-nowrap rounded-xl bg-[#65C895] px-8 py-3 text-base font-semibold text-white shadow-md hover:bg-[#58b886] transition-colors"
                 >
                   Download App
                 </Link>
                 <Link
                   href="/get-started"
-                  className="inline-block whitespace-nowrap rounded-lg border-2 border-slate-400 px-8 py-3.5 text-base font-semibold text-slate-700 hover:bg-slate-100 transition-colors"
+                  className="inline-block whitespace-nowrap rounded-xl border-2 border-slate-400 px-8 py-3 text-base font-semibold text-slate-700 hover:bg-slate-100 transition-colors"
                 >
                   Get Started
                 </Link>
               </div>
 
-              <ul className="mt-8 lg:mt-10 space-y-3 text-left max-w-md mx-auto lg:mx-0">
+              <ul className="mt-3 lg:mt-7 md:space-y-3 space-y-2 text-left max-w-md mx-auto lg:mx-0">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-center text-slate-600">
                     <FaRegCheckCircle className="h-4 w-4 mr-2 flex-shrink-0" style={{ color: highlightGreen }} />
-                    <span>{feature}</span>
+                    <span className='text-[14px] md:text-[16px] text-[#4C4C4D]'>{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -103,11 +102,11 @@ const Section = () => {
           {/* Right Column: Image Collage */}
           <div
             ref={rightColumnRef}
-            className="relative mt-12 lg:mt-0 flex items-center justify-center" // Parent centers the collage container
+            className="relative  lg:mt-0 flex items-center justify-center" // Parent centers the collage container
             style={{ minHeight: minRightColumnHeight }}
           >
             {/* This div is the main container for the collage visual elements */}
-            <div className="relative w-[90%] sm:w-full max-w-md lg:max-w-lg h-[450px] sm:h-[500px] md:h-[550px] lg:h-full"> 
+            <div className="relative w-[90%] sm:w-full max-w-md lg:max-w-sm h-[450px] sm:h-[500px] md:h-[550px] "> 
               
               {/* Green Background - This is the direct parent for the person image f */}
               <div className="absolute inset-0 bg-green-400/80 rounded-xl overflow-hidden"> 
@@ -133,39 +132,38 @@ const Section = () => {
               </div>
 
               {/* Adjusted positioning a bit, may need further tweaking */}
-              <div className="absolute z-10 top-[5%] -left-[10%] sm:top-[8%] sm:-left-[5%] bg-white p-2 md:p-3 rounded-xl shadow-md w-40 sm:w-48 flex items-center space-x-2">
-               <div>
-                 <p className="text-[9px] md:text-[12px] text-[#A9A7B6]">Enter amount</p>
-                 <span className="text-[12px] md:text-[16px] font-semibold text-slate-800">Tsh 45,000</span>
-               </div>
-                <button className="bg-[#65C895] text-white text-[10px] md:text-[13px] px-2 py-1 rounded-md mt-1 self-end">
-                    Send
-                </button>
+              <div className="absolute z-10 top-[5%] left-[-8%] sm:top-[18%] md:left-[-25%] bg-white p-2 md:p-3 rounded-xl shadow-md w-36 sm:w-48 flex items-center justify-between">
+              <div>
+                <p className="text-[9px] md:text-[12px] text-[#A9A7B6]">Enter amount</p>
+                <span className="text-[12px] md:text-[16px] font-semibold text-slate-800">Tsh 45,000</span>
               </div>
+              <button className="bg-[#65C895] text-white text-[10px] md:text-[13px] px-2 py-1 rounded-md">
+                Send
+              </button>
+            </div>
 
-              <div className="absolute z-10 bottom-[5%] -left-[10%] sm:bottom-[8%] sm:right-[8%] lg:right-[-5%] bg-white p-3 rounded-xl shadow-md w-40 sm:w-48">
+              <div className="absolute z-10 bottom-[5%] -left-[8%] sm:bottom-[8%] sm:right-[8%] 
+              lg:right-[-5%] bg-white md:p-3 p-2 rounded-xl shadow-md w-32 sm:w-48">
                 <p className="text-xs text-slate-500 mb-1">Total Income</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-slate-800">Tsh 94,500</span>
+                  <span className="text-[13px] md:text-[17px] font-semibold text-slate-800">Tsh 94,500</span>
                   <HiTrendingUp className="h-5 w-5 text-green-500" />
                 </div>
               </div>
-
-              <div className="absolute z-10 top-[5%] right-[5%] sm:top-[8%] sm:right-[8%] lg:right-[-5%] bg-yellow-400 p-2 rounded-full shadow-md">
-                <Image src={dbIcon} alt="Database icon" width={20} height={20} />
+              <div className="absolute z-10 top-[5%] right-[5%] sm:top-[8%] sm:right-[8%] lg:right-[5%] 
+                bg-yellow-400 p-2 rounded-lg w-16 md:w-24 lg:w-16 h-auto transform rotate-4">
+                <Image src={dbIcon} alt="Database icon" layout="responsive" />
               </div>
-
               <div className="absolute z-10 top-[35%] left-[-5%] sm:top-[40%] sm:left-[-2%] lg:-left-[10%] bg-purple-600 p-2 rounded-lg shadow-md transform -rotate-12">
                 <HiCheck className="h-4 w-4 text-white" />
               </div>5
-              <div className="absolute z-10 -bottom-6 right-[15%]   w-32 sm:w-36 
-              transform rotate-4 shadow-lg">
+              <div className="absolute z-10 -bottom-6 right-[15%]   w-28 
+              transform rotate-4 ">
                 <Image src={cardImage} alt="Credit card" width={180} height={113} className="rounded-lg" />
               </div>
             </div>
           </div>
         </div>
-        <Payment/>
 
       </div>
     </section>

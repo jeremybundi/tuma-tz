@@ -10,7 +10,7 @@ import d4Icon from '../../../../public/svg/D4.svg';
 
 const Merchant: React.FC = () => {
   return (
-    <div className="bg-transparent flex flex-col md:flex-row items-center justify-center p-8 lg:p-16 rounded-lg  max-w-7xl mx-auto my-10">
+    <div className="bg-transparent flex flex-col md:flex-row items-center justify-center p-8 md:p-0 md:py-10 rounded-lg  container mx-auto md:my-10">
       <div className="w-full hidden md:block md:w-1/2 lg:w-2/5 mb-8 md:mb-0 md:mr-8 lg:mr-12">
    
         <div className="relative w-full " style={{ paddingTop: `${(500 / 500) * 100}%` }}> 
