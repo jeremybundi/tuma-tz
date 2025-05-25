@@ -156,7 +156,7 @@ const Section = () => {
               </div>
               <div className="absolute z-10 top-[35%] left-[-5%] sm:top-[40%] sm:left-[-2%] lg:-left-[10%] bg-purple-600 p-2 rounded-lg shadow-md transform -rotate-12">
                 <HiCheck className="h-4 w-4 text-white" />
-              </div>5
+              </div>
               <div className="absolute z-10 -bottom-6 right-[15%]   w-28 
               transform rotate-4 ">
                 <Image src={cardImage} alt="Credit card" width={180} height={113} className="rounded-lg" />
