@@ -24,19 +24,19 @@ const contactInfoItems: ContactInfo[] = [
     icon: addressIcon,
     alt: 'Physical Address Icon',
     title: 'Physical Address',
-    details: ['Arusha, Julius Nyerere Plaza RM 56-RQ'],
+    details: ['Iconic Spaces, 9th Floor, Tan House, Victoria, Dar Es Salaam'],
   },
   {
     icon: callIcon,
     alt: 'Phone Number Icon',
     title: 'Phone Number',
-    details: ['+255 785 785 145', '+255 852 233 547'],
+    details: ['+255(0)758-999-133', '+255 (0) 716-339-695'],
   },
   {
     icon: mailIcon,
     alt: 'Email Address Icon',
     title: 'Email Address',
-    details: ['info@tuma.co.tz'],
+    details: ['info@tuma.tz'],
   },
 ];
 
