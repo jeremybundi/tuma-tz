@@ -30,7 +30,7 @@ const contactInfoItems: ContactInfo[] = [
     icon: callIcon,
     alt: 'Phone Number Icon',
     title: 'Phone Number',
-    details: ['+255(0)758-999-133', '+255 (0) 716-339-695'],
+    details: ['+255 758-999-133', '+255 716-339-695'],
   },
   {
     icon: mailIcon,
