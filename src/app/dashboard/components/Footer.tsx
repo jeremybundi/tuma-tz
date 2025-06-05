@@ -8,10 +8,6 @@ import { usePathname } from 'next/navigation';
 const tumaLogoPath: string = '/svg/logo.png'; 
 const appleLogoPath: string = '/svg/Apple.svg'; 
 const playstoreLogoPath: string = '/svg/Playstore.svg'; 
-const facebookIconPath: string = '/svg/facebook.svg'; 
-const instagramIconPath: string = '/svg/Frame.png'; 
-const linkedinIconPath: string = '/svg/linkedin.svg';
-const twitterIconPath: string = '/svg/twitter.svg'; 
 
 // Define actual store links
 const APPLE_STORE_LINK = "YOUR_APP_STORE_LINK_HERE"; 
@@ -32,12 +28,7 @@ interface SocialLink {
   alt: string;
 }
 
-const socialLinks: SocialLink[] = [
-  { href: 'https://facebook.com/yourpage', iconSrc: facebookIconPath, alt: 'Facebook' },
-  { href: 'https://instagram.com/yourpage', iconSrc: instagramIconPath, alt: 'Instagram' },
-  { href: 'https://linkedin.com/company/yourpage', iconSrc: linkedinIconPath, alt: 'LinkedIn' },
-  { href: 'https://twitter.com/yourpage', iconSrc: twitterIconPath, alt: 'Twitter/X' },
-];
+
 
 const Footer = () => {
   const pathname = usePathname();
@@ -130,20 +121,7 @@ const Footer = () => {
           {/* Column 3: Social Media & Legal */}
           <div className="md:col-span-3 mt-auto text-center md:text-left"> {/* text-center for mobile, md:text-left for larger */}
             {/* Social Links - Centered on mobile */}
-            <div className="flex space-x-3 mb-8 justify-center md:justify-start">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.alt}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Follow us on ${social.alt}`}
-                  className="bg-slate-700 hover:bg-slate-600 p-2.5 rounded-full transition-colors"
-                >
-                  <Image src={social.iconSrc} alt="" width={20} height={20} />
-                </Link>
-              ))}
-            </div>
+            
             <div className="space-y-3 text-sm mb-6 ">
               <Link href="/terms-and-conditions" className="block text-gray-400 hover:text-white transition-colors">
                 Terms and Conditions
