@@ -3,7 +3,6 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 import whatsappIcon from '../../../../public/svg/whatsapp.svg';
-import appIcon from '../../../../public/svg/app.svg'; // Note: appIcon is imported but not used in supportItems
 import phoneIcon from '../../../../public/svg/phone.svg';
 import gmailIcon from '../../../../public/svg/gmail.svg';
 import asiaGlobeImage from '../../../../public/svg/asia.svg';
@@ -14,6 +13,8 @@ interface SupportItem {
   title: string;
   linkText: string;
   href: string;
+  target?: string; 
+  rel?: string;   
 }
 
 const supportItems: SupportItem[] = [
@@ -21,31 +22,30 @@ const supportItems: SupportItem[] = [
     icon: whatsappIcon,
     alt: 'WhatsApp icon',
     title: 'WhatsApp',
-    linkText: 'Get Started',
-    href: '#whatsapp-support', // Assuming this is an anchor link to a section on your page
+    linkText: 'Chat with Us',
+    // <<< UPDATED: Use the 'wa.me' link for WhatsApp
+    href: 'https://wa.me/255758999133', 
+    target: '_blank', // Opens WhatsApp in a new tab on desktop
+    rel: 'noopener noreferrer',
   },
   {
     icon: phoneIcon,
     alt: 'Call us icon',
     title: 'Call us',
     linkText: 'Call Now',
-    href: 'tel:+255758999133', // <<< UPDATED PHONE NUMBER
+    // <<< This was already correct! Uses the 'tel:' protocol
+    href: 'tel:+255758999133', 
   },
   {
     icon: gmailIcon,
     alt: 'Email Us icon',
     title: 'Email Us',
     linkText: 'Send Email',
-    href: 'mailto:support@example.com',
+    href: 'mailto:info@tuma.tz', 
+    // It's good practice to add these for consistency, even if mailto: doesn't open in a new tab.
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
-  // If you wanted to add the appIcon item, it would look something like:
-  // {
-  //   icon: appIcon,
-  //   alt: 'Our App icon',
-  //   title: 'Our App',
-  //   linkText: 'Download Now',
-  //   href: '#app-download-link', // Or your app store link
-  // },
 ];
 
 const Support: React.FC = () => {
@@ -63,10 +63,9 @@ const Support: React.FC = () => {
             Need help with a transaction or technical issue? Our multilingual support team is available via:
           </p>
 
-          {/* UPDATED GRID CLASSES FOR BETTER CENTERING OF 3 ITEMS */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20">
             {supportItems.map((item) => (
-              <div key={item.title} className="flex flex-col items-center"> {/* This centers content within each card */}
+              <div key={item.title} className="flex flex-col items-center">
                 <div className="mb-3 md:mb-4">
                   <Image
                     src={item.icon}
@@ -81,6 +80,8 @@ const Support: React.FC = () => {
                 </h3>
                 <a
                   href={item.href}
+                  target={item.target} // Add target attribute
+                  rel={item.rel}       // Add rel attribute
                   className="text-emerald-600 hover:text-emerald-700 font-[600] text-[11px] md:text-[14px] hover:underline"
                 >
                   {item.linkText}
@@ -90,7 +91,6 @@ const Support: React.FC = () => {
           </div>
         </div>
 
-        {/* Asia Globe Image with responsive sizing */}
         <div className="w-full -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 xl:-mt-24">
           <div className="relative mx-auto w-full max-w-[550px] px-4 sm:px-6">
             <Image
@@ -98,7 +98,6 @@ const Support: React.FC = () => {
               alt="Stylized globe showing continents"
               width={550}
               height={350}
-              layout="responsive" // layout="responsive" is deprecated in Next.js 13+. Consider `fill` with `style={{objectFit: 'contain'}}` or just width/height with `className="w-full h-auto"`
               className="w-full h-auto"
             />
           </div>

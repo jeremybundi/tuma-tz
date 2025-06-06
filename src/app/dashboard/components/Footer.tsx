@@ -123,10 +123,10 @@ const Footer = () => {
             {/* Social Links - Centered on mobile */}
             
             <div className="space-y-3 text-sm mb-6 ">
-              <Link href="/terms-and-conditions" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/Terms" className="block text-gray-400 hover:text-white transition-colors">
                 Terms and Conditions
               </Link>
-              <Link href="/privacy-policy" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/Privacy" className="block text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
             </div>

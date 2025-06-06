@@ -41,5 +41,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-};
+ plugins: [
+    require('@tailwindcss/typography'), // Add this line
+  ],};
