@@ -41,7 +41,7 @@ const supportItems: SupportItem[] = [
     alt: 'Email Us icon',
     title: 'Email Us',
     linkText: 'Send Email',
-    href: 'mailto:info@tuma.tz', 
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=info@tuma.tz', 
     // It's good practice to add these for consistency, even if mailto: doesn't open in a new tab.
     target: '_blank',
     rel: 'noopener noreferrer'

@@ -4,6 +4,8 @@ import { DM_Sans } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarComponent from "./dashboard/components/NavBar"; // Adjust path if needed
+import CookieBanner from "./dashboard/components/CookieBanner"; // <<< 1. Import the component
+
 
 // Setup DM_Sans
 const dmSans = DM_Sans({
@@ -18,8 +20,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tuma App", // You can update this
-  description: "Connecting you seamlessly.", // You can update this
+  title: "Tuma-Instant Money Transfer", 
+  description: "Connecting you seamlessly.", 
+   icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -35,7 +40,7 @@ export default function RootLayout({
         <main className="-mt-20 ">
           {children}
         </main>
-        {/* You can add a Footer component here if needed */}
+        <CookieBanner /> 
       </body>
     </html>
   );
