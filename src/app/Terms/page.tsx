@@ -15,9 +15,14 @@ const Terms: React.FC = () => {
           </p>
 
           <p>Welcome to Tuma Ventures.</p>
+
+          {/* ======================= THE FIX IS HERE ======================= */}
+          {/* By wrapping the entire string in curly braces, we solve all the errors on this line. */}
           <p>
-            These Terms and Conditions ("Terms") govern your access to and use of the payment services, platform, and related functionalities ("Services") provided by Tuma Ventures - Tuma Ventures Limited, a company duly incorporated under the laws of the United Republic of Tanzania, with Company Registration Number 20000054603, and holding a valid Payment Service Provider License NBPSL No. 0000-60 issued by the Bank of Tanzania ("BoT"). By accessing, using, or registering for our Services, you agree to be bound by these Terms, as well as our Privacy Policy and any other policies, guidelines, or rules applicable to specific Services you use. If you do not agree to these Terms, you may not access or use our Services.
+            {'These Terms and Conditions ("Terms") govern your access to and use of the payment services, platform, and related functionalities ("Services") provided by Tuma Ventures - Tuma Ventures Limited, a company duly incorporated under the laws of the United Republic of Tanzania, with Company Registration Number 20000054603, and holding a valid Payment Service Provider License NBPSL No. 0000-60 issued by the Bank of Tanzania ("BoT"). By accessing, using, or registering for our Services, you agree to be bound by these Terms, as well as our Privacy Policy and any other policies, guidelines, or rules applicable to specific Services you use. If you do not agree to these Terms, you may not access or use our Services.'}
           </p>
+          {/* ============================================================= */}
+          
           <p className="font-semibold">
             PLEASE READ THESE TERMS CAREFULLY BEFORE USING OUR SERVICES. YOUR CONTINUED USE OF OUR SERVICES CONSTITUTES YOUR ACCEPTANCE OF THESE TERMS.
           </p>
@@ -28,6 +33,7 @@ const Terms: React.FC = () => {
             
             <h3 className="text-xl font-semibold mt-4">1. Definitions</h3>
             <p>Unless the context otherwise requires, or as defined elsewhere in these Terms, the following terms shall have the meanings set out below:</p>
+            {/* The rest of the file already seems to have fixes applied, so we leave it as is. */}
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>{'"Act":'}</strong> {"The National Payment Systems Act, 2015, of the United Republic of Tanzania, as amended from time to time."}</li>
               <li><strong>{'"Account":'}</strong> {"Your registered user account with Tuma Ventures, enabling access to and use of the Services, which may include an Electronic Money Account."}</li>
@@ -83,6 +89,7 @@ const Terms: React.FC = () => {
             <p><strong>7.4. Refusal of Transactions:</strong> We reserve the right to refuse any transaction that violates these Terms, is suspicious, or poses a risk to our system.</p>
           </section>
 
+          {/* ... The rest of your sections ... */}
           {/* PART III */}
           <section>
             <h2 className="text-2xl font-semibold">PART III: FEES, CHARGES, AND TAXES</h2>

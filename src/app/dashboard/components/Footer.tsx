@@ -22,11 +22,11 @@ const footerNavLinks = [
     { href: '#regulation-licensing', label: 'Regulation & Licensing', id: 'regulation-licensing' },
 ];
 
-interface SocialLink {
+{/*interface SocialLink {
   href: string;
   iconSrc: string; 
   alt: string;
-}
+} */}
 
 
 
