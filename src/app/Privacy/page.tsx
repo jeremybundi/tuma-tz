@@ -1,5 +1,3 @@
-// src/components/Privacy.tsx
-
 import React from 'react';
 
 const Privacy: React.FC = () => {
@@ -19,7 +17,7 @@ const Privacy: React.FC = () => {
             
             <h3 className="text-xl font-semibold mt-4">1.1. Purpose of This Policy:</h3>
             <p>
-              This Privacy Policy outlines how Tuma Ventures Limited (“Tuma,” “we,” “us,” or “our”), a company duly incorporated in the United Republic of Tanzania under Registration No. 165945697, collects, uses, discloses, and safeguards personal data in connection with the provision of its digital financial services. This includes services accessed through our official website (www.tuma.tz) and mobile applications (collectively, the “Service”).
+              {"This Privacy Policy outlines how Tuma Ventures Limited (“Tuma,” “we,” “us,” or “our”), a company duly incorporated in the United Republic of Tanzania under Registration No. 165945697, collects, uses, discloses, and safeguards personal data in connection with the provision of its digital financial services. This includes services accessed through our official website (www.tuma.tz) and mobile applications (collectively, the “Service”)."}
             </p>
 
             <h3 className="text-xl font-semibold mt-4">1.2. Our Commitment to Your Privacy:</h3>
@@ -67,10 +65,10 @@ const Privacy: React.FC = () => {
             <h3 className="text-xl font-semibold mt-4">2.4. Categories of Personal Data Collected:</h3>
             <p>The personal data we collect may include, but is not limited to:</p>
             <ol className="list-decimal list-inside pl-4 space-y-2">
-                <li><strong>Personal Identification Information:</strong> Your full name, gender, contact details (residential address, phone number, email address), date of birth, place of birth, nationality, and identity documents (e.g., National ID number, Passport number, Driver’s License number), photograph, and biometric data (if applicable and consented to).</li>
+                <li><strong>Personal Identification Information:</strong> {"Your full name, gender, contact details (residential address, phone number, email address), date of birth, place of birth, nationality, and identity documents (e.g., National ID number, Passport number, Driver’s License number), photograph, and biometric data (if applicable and consented to)."}</li>
                 <li><strong>Financial Information:</strong> Bank account details (if linked), mobile money numbers, transaction history, payment instrument details, and e-wallet balances.</li>
                 <li><strong>Transaction and Payment Information:</strong> Details about the payments you make or receive, including amounts, dates, times, payment methods, transaction references, and recipient/sender details.</li>
-                <li><strong>Customer Support Interactions:</strong> Records of your communications with our customer support team (e.g., call recordings, chat transcripts, email correspondence).</li>
+                <li><strong>Customer Support Interactions:</strong> {"Records of your communications with our customer support team (e.g., call recordings, chat transcripts, email correspondence)."}</li>
             </ol>
           </section>
 
@@ -81,10 +79,10 @@ const Privacy: React.FC = () => {
             <h3 className="text-xl font-semibold mt-4">3.1. Lawful Basis for Processing (PDPA 2022, Section 28):</h3>
             <p>We process your personal data based on the following lawful grounds:</p>
             <ol className="list-decimal list-inside pl-4 space-y-2">
-                <li><strong>Consent:</strong> Where you have given explicit consent for specific processing activities (e.g., for marketing communications). You have the right to withdraw your consent at any time.</li>
-                <li><strong>Performance of a Contract:</strong> Where processing is necessary for the performance of a contract with you or to take steps at your request before entering into a contract (e.g., to process your transactions, manage your account, or deliver our Services).</li>
-                <li><strong>Compliance with a Legal Obligation:</strong> Where processing is necessary for compliance with a legal or regulatory obligation to which Tuma Ventures Limited is subject (e.g., KYC/AML/CFT compliance, fraud prevention, regulatory reporting to the BoT).</li>
-                <li><strong>Legitimate Interests:</strong> Where processing is necessary for our legitimate interests or those of a third party, provided your fundamental rights and interests do not override those interests.</li>
+                <li><strong>Consent:</strong> {"Where you have given explicit consent for specific processing activities (e.g., for marketing communications). You have the right to withdraw your consent at any time."}</li>
+                <li><strong>Performance of a Contract:</strong> {"Where processing is necessary for the performance of a contract with you or to take steps at your request before entering into a contract (e.g., to process your transactions, manage your account, or deliver our Services)."}</li>
+                <li><strong>Compliance with a Legal Obligation:</strong> {"Where processing is necessary for compliance with a legal or regulatory obligation to which Tuma Ventures Limited is subject (e.g., KYC/AML/CFT compliance, fraud prevention, regulatory reporting to the BoT)."}</li>
+                <li><strong>Legitimate Interests:</strong> {"Where processing is necessary for our legitimate interests or those of a third party, provided your fundamental rights and interests do not override those interests."}</li>
                 <li><strong>Public Interest/Official Authority:</strong> Where processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in Tuma Ventures Limited.</li>
             </ol>
 
@@ -95,9 +93,9 @@ const Privacy: React.FC = () => {
                 <li><strong>Regulatory Compliance:</strong> To comply with relevant Tanzanian laws and regulatory requirements, including Bank of Tanzania (BoT) directives, the National Payment Systems Act, 2015, the Anti-Money Laundering Act, Cap. 423, and the Anti-Terrorism Act, 2002. This includes conducting KYC verification, sanctions screening, transaction monitoring, and regulatory reporting.</li>
                 <li><strong>Customer Support and Communication:</strong> To respond to your inquiries, provide essential service updates, resolve technical issues, and manage your relationship with us.</li>
                 <li><strong>Service Improvement and Optimization:</strong> To analyze usage patterns, collect feedback, troubleshoot errors, and improve user experience, service performance, and platform functionality.</li>
-                <li><strong>Risk Management and Security:</strong> To monitor systems for fraud prevention, detect suspicious activities, enhance platform security, and protect against unauthorized access, misuse, or cyber threats. This includes adherence to the Cybercrimes Act, 2015.</li>
+                <li><strong>Risk Management and Security:</strong> {"To monitor systems for fraud prevention, detect suspicious activities, enhance platform security, and protect against unauthorized access, misuse, or cyber threats. This includes adherence to the Cybercrimes Act, 2015."}</li>
                 <li><strong>Internal Business Operations:</strong> For internal management, accounting, auditing, and record-keeping purposes as required by law and internal policies.</li>
-                <li><strong>Marketing and Promotional Communications:</strong> To provide you with important service-related communications and, where you have provided your explicit consent, promotional updates about new features, products, or offers. You can opt out of marketing communications at any time.</li>
+                <li><strong>Marketing and Promotional Communications:</strong> {"To provide you with important service-related communications and, where you have provided your explicit consent, promotional updates about new features, products, or offers. You can opt out of marketing communications at any time."}</li>
             </ol>
           </section>
 
@@ -108,10 +106,10 @@ const Privacy: React.FC = () => {
             <p>Your personal data may be shared under the following circumstances, always with appropriate safeguards and in compliance with this Policy and applicable laws:</p>
             <ol className="list-decimal list-inside pl-4 space-y-2">
                 <li><strong>With Service Providers:</strong> With trusted third-party service providers who support our operations. This includes providers for IT hosting, infrastructure, data analytics, communication services, customer support, and identity verification. These service providers are contractually obligated to protect your data and use it only for the purposes for which we engage them.</li>
-                <li><strong>Regulatory and Legal Bodies:</strong> When required by law, court order, or to comply with lawful requests from government agencies, regulatory bodies such as the Bank of Tanzania (BoT), the Financial Intelligence Unit (FIU), the Tanzania Revenue Authority (TRA), or judicial authorities. This includes mandatory reporting under AML/CFT regulations.</li>
+                <li><strong>Regulatory and Legal Bodies:</strong> {"When required by law, court order, or to comply with lawful requests from government agencies, regulatory bodies such as the Bank of Tanzania (BoT), the Financial Intelligence Unit (FIU), the Tanzania Revenue Authority (TRA), or judicial authorities. This includes mandatory reporting under AML/CFT regulations."}</li>
                 <li><strong>Interoperability Partners:</strong> With other licensed payment service providers and financial institutions to facilitate seamless payment transactions, only as necessary to complete your transactions and as governed by Interoperability Agreements and relevant BoT directives.</li>
-                <li><strong>With Your Consent:</strong> Where necessary, we will obtain your explicit consent before sharing your data for purposes outside the primary scope of service delivery, legal compliance, or our legitimate interests as described in this Policy.</li>
-                <li><strong>Business Transfers:</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company. In such cases, your data would be subject to the acquiring entity's privacy policy.</li>
+                <li><strong>With Your Consent:</strong> {"Where necessary, we will obtain your explicit consent before sharing your data for purposes outside the primary scope of service delivery, legal compliance, or our legitimate interests as described in this Policy."}</li>
+                <li><strong>Business Transfers:</strong> {"In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company. In such cases, your data would be subject to the acquiring entity's privacy policy."}</li>
             </ol>
           </section>
 
@@ -121,11 +119,11 @@ const Privacy: React.FC = () => {
             <h3 className="text-xl font-semibold mt-4">5.1. Your Data Protection Rights (PDPA 2022, Part V):</h3>
             <p>In accordance with the Personal Data Protection Act, 2022, you have the following rights regarding your personal data held by us:</p>
             <ol className="list-decimal list-inside pl-4 space-y-2">
-                <li><strong>Right to Access:</strong> To request access to your personal data that we hold, and to receive information about its processing.</li>
+                <li><strong>Right to Access:</strong> {"To request access to your personal data that we hold, and to receive information about its processing."}</li>
                 <li><strong>Right to Rectification:</strong> To request the correction or updating of inaccurate, incomplete, or outdated personal data.</li>
                 <li><strong>Right to Object/Restriction of Processing:</strong> To object to or request the restriction of specific processing activities, especially where processing is based on legitimate interests or direct marketing.</li>
-                <li><strong>Right to Withdraw Consent:</strong> Where processing is based on your consent, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.</li>
-                <li><strong>Right to Erasure/Deletion ("Right to be Forgotten"):</strong> To request the deletion of your personal data, subject to our legal and regulatory retention obligations.</li>
+                <li><strong>Right to Withdraw Consent:</strong> {"Where processing is based on your consent, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal."}</li>
+                <li><strong>{"Right to Erasure/Deletion (\"Right to be Forgotten\"): "}</strong> To request the deletion of your personal data, subject to our legal and regulatory retention obligations.</li>
                 <li><strong>Right to Data Portability:</strong> To request a copy of your personal data in a structured, commonly used, and machine-readable format, and to transmit that data to another data controller, where technically feasible and permitted by law.</li>
                 <li><strong>Right to lodge a Complaint:</strong> To lodge a complaint with the relevant data protection authority in Tanzania if you believe your rights have been violated.</li>
             </ol>
@@ -177,7 +175,7 @@ const Privacy: React.FC = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">10. Children’s Privacy</h2>
+            <h2 className="text-2xl font-semibold">{"10. Children's Privacy"}</h2>
             <p>Our Services are not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors. If we become aware that personal data of a minor has been inadvertently collected, it will be promptly deleted from our records.</p>
           </section>
 
@@ -188,7 +186,7 @@ const Privacy: React.FC = () => {
 
           <section>
             <h2 className="text-2xl font-semibold">12. Changes to This Privacy Policy</h2>
-            <p>We may periodically update this Privacy Policy to reflect changes in our data practices, legal requirements, or regulatory guidance. Any changes will be posted on this page with a revised "Last Updated" date. Where significant changes are made, we will notify you through our platforms or by email. Your continued use of our Services after the effective date of the revised Policy constitutes your acceptance of the changes.</p>
+            <p>{"We may periodically update this Privacy Policy to reflect changes in our data practices, legal requirements, or regulatory guidance. Any changes will be posted on this page with a revised \"Last Updated\" date. Where significant changes are made, we will notify you through our platforms or by email. Your continued use of our Services after the effective date of the revised Policy constitutes your acceptance of the changes."}</p>
           </section>
 
           {/* Section 13: Contact Information */}

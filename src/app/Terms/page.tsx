@@ -1,5 +1,3 @@
-// src/components/Terms.tsx
-
 import React from 'react';
 
 const Terms: React.FC = () => {
@@ -31,17 +29,17 @@ const Terms: React.FC = () => {
             <h3 className="text-xl font-semibold mt-4">1. Definitions</h3>
             <p>Unless the context otherwise requires, or as defined elsewhere in these Terms, the following terms shall have the meanings set out below:</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li><strong>"Act":</strong> The National Payment Systems Act, 2015, of the United Republic of Tanzania, as amended from time to time.</li>
-              <li><strong>"Account":</strong> Your registered user account with Tuma Ventures, enabling access to and use of the Services, which may include an Electronic Money Account.</li>
-              <li><strong>"Bank" / "BoT":</strong> The Bank of Tanzania.</li>
-              <li><strong>"Consumer" / "User" / "You":</strong> Any natural person or legal entity that uses the electronic payment services provided by Tuma Ventures.</li>
-              <li><strong>"Electronic Money":</strong> Monetary value as represented by a claim on its issuer, that is electronically stored, issued against receipt of funds, accepted as means of payment by others, and can be redeemed in cash.</li>
-              <li><strong>"Electronic Money Account":</strong> A sub-account within your main Account where your Electronic Money balance is held and managed.</li>
-              <li><strong>"Electronic Money Issuer":</strong> Tuma Ventures, in its capacity as a licensed issuer of Electronic Money.</li>
-              <li><strong>"PSP" / "Payment System Provider" / "Tuma Ventures" / "We" / "Us":</strong> Tuma Ventures - Tuma Ventures Limited.</li>
-              <li><strong>"Privacy Policy":</strong> The Tuma Ventures policy governing the collection, use, and disclosure of your personal information, available on our website.</li>
-              <li><strong>"Services":</strong> The electronic payment services, platform, and related functionalities provided by Tuma Ventures.</li>
-              <li><strong>"Trust Account":</strong> A separate legal entity in the form of a trust, holding funds equivalent to the Electronic Money issued to customers.</li>
+              <li><strong>{'"Act":'}</strong> {"The National Payment Systems Act, 2015, of the United Republic of Tanzania, as amended from time to time."}</li>
+              <li><strong>{'"Account":'}</strong> {"Your registered user account with Tuma Ventures, enabling access to and use of the Services, which may include an Electronic Money Account."}</li>
+              <li><strong>{'"Bank" / "BoT":'}</strong> The Bank of Tanzania.</li>
+              <li><strong>{'"Consumer" / "User" / "You":'}</strong> Any natural person or legal entity that uses the electronic payment services provided by Tuma Ventures.</li>
+              <li><strong>{'"Electronic Money":'}</strong> {"Monetary value as represented by a claim on its issuer, that is electronically stored, issued against receipt of funds, accepted as means of payment by others, and can be redeemed in cash."}</li>
+              <li><strong>{'"Electronic Money Account":'}</strong> {"A sub-account within your main Account where your Electronic Money balance is held and managed."}</li>
+              <li><strong>{'"Electronic Money Issuer":'}</strong> {"Tuma Ventures, in its capacity as a licensed issuer of Electronic Money."}</li>
+              <li><strong>{'"PSP" / "Payment System Provider" / "Tuma Ventures" / "We" / "Us":'}</strong> Tuma Ventures - Tuma Ventures Limited.</li>
+              <li><strong>{'"Privacy Policy":'}</strong> The Tuma Ventures policy governing the collection, use, and disclosure of your personal information, available on our website.</li>
+              <li><strong>{'"Services":'}</strong> The electronic payment services, platform, and related functionalities provided by Tuma Ventures.</li>
+              <li><strong>{'"Trust Account":'}</strong> {"A separate legal entity in the form of a trust, holding funds equivalent to the Electronic Money issued to customers."}</li>
             </ul>
 
             <h3 className="text-xl font-semibold mt-4">2. Acceptance of Terms</h3>
@@ -49,13 +47,13 @@ const Terms: React.FC = () => {
             <p><strong>2.2.</strong> You affirm that you are at least 18 years of age and possess the full legal capacity to enter into a binding agreement.</p>
 
             <h3 className="text-xl font-semibold mt-4">3. Amendments to Terms</h3>
-            <p><strong>3.1.</strong> Tuma Ventures reserves the right to modify or update these Terms at any time. We will provide at least fourteen (14) days' notice of any material changes.</p>
+            <p><strong>3.1.</strong> {"Tuma Ventures reserves the right to modify or update these Terms at any time. We will provide at least fourteen (14) days' notice of any material changes."}</p>
             <p><strong>3.2.</strong> Your continued use of the Services after the effective date of any revised Terms will constitute your acceptance of such changes.</p>
           </section>
 
           {/* PART II */}
           <section>
-            <h2 className="text-2xl font-semibold">PART II: TUMA VENTURES' SERVICES AND YOUR ACCOUNT</h2>
+            <h2 className="text-2xl font-semibold">{"PART II: TUMA VENTURES' SERVICES AND YOUR ACCOUNT"}</h2>
             
             <h3 className="text-xl font-semibold mt-4">4. Our Services and Scope of Licence</h3>
             <p><strong>4.1.</strong> Tuma Ventures provides electronic payment services within the scope of our Licence, including:</p>
@@ -75,8 +73,8 @@ const Terms: React.FC = () => {
 
             <h3 className="text-xl font-semibold mt-4">6. Electronic Money Issuance and Redemption</h3>
             <p><strong>6.1. Issuance Principle:</strong> Electronic Money is issued upon receipt of equivalent funds into our designated Trust Account.</p>
-            <p><strong>6.2. Redemption Rights:</strong> You can redeem your Electronic Money balance at any time at its full nominal value, less any applicable fees.</p>
-            <p><strong>6.3. Trust Account Management:</strong> All customer funds are held in a Trust Account, legally separate from Tuma Ventures' operational funds, to safeguard your money.</p>
+            <p><strong>6.2. Redemption Rights:</strong> {"You can redeem your Electronic Money balance at any time at its full nominal value, less any applicable fees."}</p>
+            <p><strong>6.3. Trust Account Management:</strong> {"All customer funds are held in a Trust Account, legally separate from Tuma Ventures' operational funds, to safeguard your money."}</p>
 
             <h3 className="text-xl font-semibold mt-4">7. Transaction Processing</h3>
             <p><strong>7.1. Accuracy of Instructions:</strong> You are solely responsible for the accuracy of all Payment Instructions.</p>
@@ -91,7 +89,7 @@ const Terms: React.FC = () => {
 
             <h3 className="text-xl font-semibold mt-4">8. Fees and Charges</h3>
             <p><strong>8.1.</strong> All applicable fees and charges will be clearly displayed to you before you complete a transaction.</p>
-            <p><strong>8.2.</strong> We reserve the right to modify our fee structure with at least thirty (30) days' notice.</p>
+            <p><strong>8.2.</strong> {"We reserve the right to modify our fee structure with at least thirty (30) days' notice."}</p>
             
             <h3 className="text-xl font-semibold mt-4">9. Taxes</h3>
             <p><strong>9.1.</strong> You are solely responsible for all taxes associated with your use of the Services.</p>
@@ -103,11 +101,11 @@ const Terms: React.FC = () => {
             
             <h3 className="text-xl font-semibold mt-4">10. Consumer Protection and Fair Treatment</h3>
             <p><strong>10.1.</strong> We are committed to upholding the highest standards of financial consumer protection, including transparency, fair treatment, and protection of your assets and information.</p>
-            <p><strong>10.2. Complaints Handling:</strong> If you have a complaint, please contact our customer support first. We aim to resolve it within fourteen (14) days. If you are unsatisfied, you may escalate the complaint to the Bank of Tanzania.</p>
+            <p><strong>10.2. Complaints Handling:</strong> {"If you have a complaint, please contact our customer support first. We aim to resolve it within fourteen (14) days. If you are unsatisfied, you may escalate the complaint to the Bank of Tanzania."}</p>
 
             <h3 className="text-xl font-semibold mt-4">11. Limitations of Liability</h3>
-            <p><strong>11.1.</strong> Tuma Ventures shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Services, unless caused by our gross negligence or willful misconduct.</p>
-            <p><strong>11.2.</strong> Our total liability to you shall not exceed the lesser of the fees you paid us in the preceding 12 months or TZS 6,000,000 per incident.</p>
+            <p><strong>11.1.</strong> {"Tuma Ventures shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Services, unless caused by our gross negligence or willful misconduct."}</p>
+            <p><strong>11.2.</strong> {"Our total liability to you shall not exceed the lesser of the fees you paid us in the preceding 12 months or TZS 6,000,000 per incident."}</p>
 
             <h3 className="text-xl font-semibold mt-4">12. Indemnification</h3>
             <p>You agree to indemnify and hold harmless Tuma Ventures from any claims, losses, or expenses arising from your breach of these Terms, misuse of the Services, or violation of any law or third-party rights.</p>
@@ -127,7 +125,7 @@ const Terms: React.FC = () => {
             <p>We operate in strict compliance with all AML/CFT laws. We will monitor transactions, report suspicious activity to the Financial Intelligence Unit (FIU), and cooperate with all authorities.</p>
 
             <h3 className="text-xl font-semibold mt-4">16. Retention of Payment System Records</h3>
-            <p>We will retain transaction records for at least five (5) years and AML-related records for at least ten (10) years, as required by law.</p>
+            <p>{"We will retain transaction records for at least five (5) years and AML-related records for at least ten (10) years, as required by law."}</p>
           </section>
 
           {/* PART VI */}
@@ -135,7 +133,7 @@ const Terms: React.FC = () => {
             <h2 className="text-2xl font-semibold">PART VI: MISCELLANEOUS PROVISIONS</h2>
 
             <h3 className="text-xl font-semibold mt-4">17. Intellectual Property</h3>
-            <p>All intellectual property rights associated with the Services are the exclusive property of Tuma Ventures or its licensors. You are granted a limited, non-exclusive license to use the Services according to these Terms.</p>
+            <p>{"All intellectual property rights associated with the Services are the exclusive property of Tuma Ventures or its licensors. You are granted a limited, non-exclusive license to use the Services according to these Terms."}</p>
             
             <h3 className="text-xl font-semibold mt-4">18. Governing Law and Jurisdiction</h3>
             <p>These Terms are governed by the laws of the United Republic of Tanzania. Any disputes shall be subject to the exclusive jurisdiction of the High Court of Tanzania.</p>
@@ -144,7 +142,7 @@ const Terms: React.FC = () => {
             <p>We reserve the right to suspend or terminate your Account for any breach of these Terms, fraudulent activity, or as required by law or regulatory bodies.</p>
 
             <h3 className="text-xl font-semibold mt-4">20. Winding-Up, Receivership, or Judicial Management of Tuma Ventures</h3>
-            <p>In the event of our insolvency, payment settlements made before any winding-up order will be honored, and customer funds in the Trust Account are protected.</p>
+            <p>{"In the event of our insolvency, payment settlements made before any winding-up order will be honored, and customer funds in the Trust Account are protected."}</p>
 
             <h3 className="text-xl font-semibold mt-4">21. Entire Agreement</h3>
             <p>These Terms, along with our Privacy Policy, constitute the entire agreement between you and Tuma Ventures.</p>
