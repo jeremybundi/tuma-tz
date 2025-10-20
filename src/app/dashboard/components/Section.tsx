@@ -81,10 +81,10 @@ const Section = () => {
                   Download App
                 </Link>
                 <Link
-                  href="/get-started"
-                  className="inline-block whitespace-nowrap rounded-xl border-2 border-slate-400 px-8 py-3 text-base font-semibold text-slate-700 hover:bg-slate-100 transition-colors"
+                  href="/transaction-limits"
+                  className="inline-block whitespace-nowrap rounded-xl border-2 border-slate-400 px-5 py-3 text-base font-semibold text-gray-500 hover:bg-slate-100 transition-colors"
                 >
-                  Get Started
+                  Transaction Limits
                 </Link>
               </div>
 
@@ -96,6 +96,7 @@ const Section = () => {
                   </li>
                 ))}
               </ul>
+              
             </div>
           </div>
 
